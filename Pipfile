@@ -16,6 +16,7 @@ pandas = "*"
 flake8 = "*"
 pytest = "*"
 pytest-cov = "*"
+folium = "*"
 
 [requires]
 python_version = "3.6"

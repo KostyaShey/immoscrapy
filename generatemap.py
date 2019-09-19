@@ -8,6 +8,10 @@ MISSINGCORD = 0
 pickle_in = open("flats.pickle", "rb")
 flat_list = pickle.load(pickle_in)
 
+#function for autotest
+def addition(x,y):
+    return x + y
+
 def colorpicker(flat):
 
     if df.loc[flat[0]]["Price"] > mean_dist.loc[df.loc[flat[0]]["District"]]["Price"]*1.2:
@@ -16,8 +20,6 @@ def colorpicker(flat):
         return 'green'
     else:
         return 'gray'
-
-print(flat_list[:10])
 
 for flat in flat_list:
     flat[2] = flat[2].replace(' ', '')
