@@ -18,6 +18,7 @@ pytest = "*"
 pytest-cov = "*"
 folium = "*"
 lxml = "*"
+gitpython = "*"
 
 [requires]
 python_version = "3.6"
