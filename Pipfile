@@ -17,6 +17,7 @@ flake8 = "*"
 pytest = "*"
 pytest-cov = "*"
 folium = "*"
+lxml = "*"
 
 [requires]
 python_version = "3.6"
