@@ -22,4 +22,5 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            pytest -v --cov=calculator
+            flake8 --exclude=venv* --statistics
+            pytest -v --cov=generatemap
