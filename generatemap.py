@@ -1,6 +1,5 @@
 import pickle
 import folium
-from geopy.geocoders import Bing
 import pandas as pd
 
 FLATSERROR = 0

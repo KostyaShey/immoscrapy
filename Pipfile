@@ -7,6 +7,15 @@ verify_ssl = true
 pylint = "*"
 
 [packages]
+bs4 = "*"
+pickle = "*"
+torrequest = "*"
+fakeuseragent = "*"
+geopy = "*"
+pandas = "*"
+flake8 = "*"
+pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.6"
