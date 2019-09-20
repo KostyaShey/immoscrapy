@@ -19,6 +19,7 @@ pytest-cov = "*"
 folium = "*"
 lxml = "*"
 gitpython = "*"
+fake-useragent = "*"
 
 [requires]
 python_version = "3.6"
