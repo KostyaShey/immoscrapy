@@ -14,9 +14,9 @@ def addition(x,y):
 
 def colorpicker(flat):
 
-    if df.loc[flat[0]]["Price"] > mean_dist.loc[df.loc[flat[0]]["District"]]["Price"]*1.2:
+    if df.loc[flat[0]]["Price"] > mean_dist.loc[df.loc[flat[0]]["Rooms"]]["Price"]*1.2:
         return "red"
-    if df.loc[flat[0]]["Price"] < mean_dist.loc[df.loc[flat[0]]["District"]]["Price"]*0.8:
+    if df.loc[flat[0]]["Price"] < mean_dist.loc[df.loc[flat[0]]["Rooms"]]["Price"]*0.8:
         return 'green'
     else:
         return 'gray'
@@ -64,16 +64,16 @@ for flat in flat_list:
 
 df = pd.DataFrame(flat_list, columns =['Link', 'Name', 'Price', 'Additional costs', 'Rooms', 'Size', 'Street and Number', 'lat', 'long', 'City', 'District'])
 
-mean_dist = df.groupby('District') \
-.agg({'District':'size', 'Price':'mean'}) \
-.rename(columns={'District':'District count','sent':'mean Price'})\
+mean_dist = df.groupby('Rooms') \
+.agg({'Rooms':'size', 'Price':'mean'}) \
+.rename(columns={'Rooms':'Rooms count','sent':'mean Price'})\
 .reset_index()
 
 decimals = 2    
 mean_dist['Price'] = mean_dist['Price'].apply(lambda x: round(x, decimals))
 
 df.set_index("Link", inplace=True)
-mean_dist.set_index("District", inplace=True)
+mean_dist.set_index("Rooms", inplace=True)
 
 map = folium.Map(location=[53.57532,10.01534], zoom_start = 12)
 
